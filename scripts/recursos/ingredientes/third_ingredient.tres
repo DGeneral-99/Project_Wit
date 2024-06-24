@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="magicIngredient" load_steps=3 format=3 uid="uid://dpwdtqfefbrql"]
+
+[ext_resource type="Script" path="res://scripts/recursos/ingredientes/MagicIngredient.gd" id="1_w1keh"]
+[ext_resource type="Texture2D" uid="uid://ckx6x2ra4s8cl" path="res://assets/ingredients/ingredient_3.png" id="2_q4468"]
+
+[resource]
+script = ExtResource("1_w1keh")
+name = "one"
+number = 1
+unlock = true
+lvl = 0
+time = 60.0
+money = 0.0
+texture = ExtResource("2_q4468")
