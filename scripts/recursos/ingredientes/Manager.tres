@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ListIngredients" load_steps=7 format=3 uid="uid://lo435ldyogm4"]
+
+[ext_resource type="Resource" uid="uid://cfu6lnmgoe4wq" path="res://scripts/recursos/ingredientes/first_ingredient.tres" id="1_dsijb"]
+[ext_resource type="Resource" uid="uid://dlh1bdredan4r" path="res://scripts/recursos/ingredientes/Zero_ingredient.tres" id="1_upcfb"]
+[ext_resource type="Resource" uid="uid://b5tftqqyorcao" path="res://scripts/recursos/ingredientes/second_ingredient.tres" id="2_hrnwx"]
+[ext_resource type="Resource" uid="uid://dpwdtqfefbrql" path="res://scripts/recursos/ingredientes/third_ingredient.tres" id="3_lksbv"]
+[ext_resource type="Resource" uid="uid://cy6dfwbojv8vg" path="res://scripts/recursos/ingredientes/fourth_ingredient.tres" id="4_804eg"]
+[ext_resource type="Script" path="res://scripts/recursos/ingredientes/ListIngredients.gd" id="5_hwiw8"]
+
+[resource]
+script = ExtResource("5_hwiw8")
+Ingredients = Array[Resource("res://scripts/recursos/ingredientes/MagicIngredient.gd")]([ExtResource("1_upcfb"), ExtResource("1_dsijb"), ExtResource("2_hrnwx"), ExtResource("3_lksbv"), ExtResource("4_804eg")])
+usingIngredients = Array[int]([0, 0, 0])
