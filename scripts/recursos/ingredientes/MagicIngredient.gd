@@ -14,5 +14,5 @@ class_name magicIngredient
 
 @export var texture : Texture2D
 
-func upgrade():
+func upgrade()->void:
 	pass
