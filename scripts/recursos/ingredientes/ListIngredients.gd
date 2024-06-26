@@ -33,4 +33,9 @@ func numberPotion() -> int:
 		potion += -(floor((ingredients[2]+ingredients[3])/2)+floor((ingredients[2]+ingredients[3])/3))	 ## quimica extra de profuncidad entre 3 y 4
 	
 	return int(potion)
-
+	
+func isUnlock(ingredient:int)->bool:
+	return Ingredients[ingredient].unlock
+func getIngredient(ingredient:int)->magicIngredient:
+	return Ingredients[ingredient]
+	
