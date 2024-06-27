@@ -1,0 +1,218 @@
+[gd_resource type="Resource" script_class="ListPotion" load_steps=45 format=3 uid="uid://letmwf6n0p6x"]
+
+[ext_resource type="Script" path="res://scripts/recursos/potions/MagicPotion.gd" id="1_w3pr4"]
+[ext_resource type="Texture2D" uid="uid://dr5jxdnbfol0c" path="res://assets/potions/Potion_0.png" id="2_2rlji"]
+[ext_resource type="Script" path="res://scripts/recursos/potions/ListPotions.gd" id="3_653vt"]
+[ext_resource type="Texture2D" uid="uid://w0iw8ti5eo4r" path="res://assets/potions/Potion_1.png" id="3_ks8gf"]
+[ext_resource type="Texture2D" uid="uid://cyi7tblly5lfs" path="res://assets/potions/Potion_2.png" id="4_25qjt"]
+[ext_resource type="Texture2D" uid="uid://bgssmlrl3ngnu" path="res://assets/potions/Potion_3.png" id="5_t7kp6"]
+[ext_resource type="Texture2D" uid="uid://cosyv3x5hmvhy" path="res://assets/potions/Potion_4.png" id="6_l74o5"]
+[ext_resource type="Texture2D" uid="uid://b7fgs6v5lkb50" path="res://assets/potions/Potion_5.png" id="7_ejp0q"]
+[ext_resource type="Texture2D" uid="uid://bc242huagm6b4" path="res://assets/potions/Potion_6.png" id="8_w3tyh"]
+[ext_resource type="Texture2D" uid="uid://vbkreapc4gmd" path="res://assets/potions/Potion_7.png" id="9_dajx4"]
+[ext_resource type="Texture2D" uid="uid://b5nwdtngrl28w" path="res://assets/potions/Potion_8.png" id="10_2qirx"]
+[ext_resource type="Texture2D" uid="uid://c0qv6lotg61xh" path="res://assets/potions/Potion_9.png" id="11_b3abx"]
+[ext_resource type="Texture2D" uid="uid://bnmfanguhxa6g" path="res://assets/potions/Potion_10.png" id="12_d46mn"]
+[ext_resource type="Texture2D" uid="uid://cjdtubjt1i3wh" path="res://assets/potions/Potion_11.png" id="13_hpukh"]
+[ext_resource type="Texture2D" uid="uid://d37ilqp1mtrrq" path="res://assets/potions/Potion_12.png" id="14_sasa6"]
+[ext_resource type="Texture2D" uid="uid://cdiogs6tcffkc" path="res://assets/potions/Potion_13.png" id="15_yr6u3"]
+[ext_resource type="Texture2D" uid="uid://cf7w0gk12oh0x" path="res://assets/potions/Potion_14.png" id="16_gf4iw"]
+[ext_resource type="Texture2D" uid="uid://jtmlcyqk2tjn" path="res://assets/potions/Potion_15.png" id="17_2aihk"]
+[ext_resource type="Texture2D" uid="uid://c6cqtw8be6alh" path="res://assets/potions/Potion_16.png" id="18_88haf"]
+[ext_resource type="Texture2D" uid="uid://bsmkmydsrp3ti" path="res://assets/potions/Potion_17.png" id="19_pgo84"]
+[ext_resource type="Texture2D" uid="uid://cehek1vtscn1n" path="res://assets/potions/Potion_18.png" id="20_76gyk"]
+[ext_resource type="Texture2D" uid="uid://3sbte0du7n05" path="res://assets/potions/Potion_19.png" id="21_crjjn"]
+[ext_resource type="Texture2D" uid="uid://bake6ws3n63wu" path="res://assets/potions/Potion_20.png" id="22_gxq55"]
+
+[sub_resource type="Resource" id="Resource_2ihls"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = true
+time = 60.0
+money = 100.0
+texture = ExtResource("2_2rlji")
+
+[sub_resource type="Resource" id="Resource_hxv6w"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("3_ks8gf")
+
+[sub_resource type="Resource" id="Resource_251so"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("4_25qjt")
+
+[sub_resource type="Resource" id="Resource_v61di"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("5_t7kp6")
+
+[sub_resource type="Resource" id="Resource_mgox1"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("6_l74o5")
+
+[sub_resource type="Resource" id="Resource_38dkt"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("7_ejp0q")
+
+[sub_resource type="Resource" id="Resource_euhb8"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("8_w3tyh")
+
+[sub_resource type="Resource" id="Resource_toisk"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("9_dajx4")
+
+[sub_resource type="Resource" id="Resource_1i3xp"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("10_2qirx")
+
+[sub_resource type="Resource" id="Resource_u3mbo"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("11_b3abx")
+
+[sub_resource type="Resource" id="Resource_hv3cx"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("12_d46mn")
+
+[sub_resource type="Resource" id="Resource_amqts"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("13_hpukh")
+
+[sub_resource type="Resource" id="Resource_u2g0u"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("14_sasa6")
+
+[sub_resource type="Resource" id="Resource_psb1x"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("15_yr6u3")
+
+[sub_resource type="Resource" id="Resource_6vosi"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("16_gf4iw")
+
+[sub_resource type="Resource" id="Resource_ve84y"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("17_2aihk")
+
+[sub_resource type="Resource" id="Resource_6bxn7"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("18_88haf")
+
+[sub_resource type="Resource" id="Resource_wpqy6"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("19_pgo84")
+
+[sub_resource type="Resource" id="Resource_kj3mh"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("20_76gyk")
+
+[sub_resource type="Resource" id="Resource_sy2m5"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("21_crjjn")
+
+[sub_resource type="Resource" id="Resource_geri7"]
+script = ExtResource("1_w3pr4")
+name = ""
+number = 0
+unlock = false
+time = 60.0
+money = 100.0
+texture = ExtResource("22_gxq55")
+
+[resource]
+script = ExtResource("3_653vt")
+Potions = Array[ExtResource("1_w3pr4")]([SubResource("Resource_2ihls"), SubResource("Resource_hxv6w"), SubResource("Resource_251so"), SubResource("Resource_v61di"), SubResource("Resource_mgox1"), SubResource("Resource_38dkt"), SubResource("Resource_euhb8"), SubResource("Resource_toisk"), SubResource("Resource_1i3xp"), SubResource("Resource_u3mbo"), SubResource("Resource_hv3cx"), SubResource("Resource_amqts"), SubResource("Resource_u2g0u"), SubResource("Resource_psb1x"), SubResource("Resource_6vosi"), SubResource("Resource_ve84y"), SubResource("Resource_6bxn7"), SubResource("Resource_wpqy6"), SubResource("Resource_kj3mh"), SubResource("Resource_sy2m5"), SubResource("Resource_geri7")])

@@ -10,4 +10,4 @@
 [resource]
 script = ExtResource("5_hwiw8")
 Ingredients = Array[Resource("res://scripts/recursos/ingredientes/MagicIngredient.gd")]([ExtResource("1_upcfb"), ExtResource("1_dsijb"), ExtResource("2_hrnwx"), ExtResource("3_lksbv"), ExtResource("4_804eg")])
-usingIngredients = Array[int]([0, 0, 0])
+usingIngredients = Array[int]([0, 1, 0])

@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://60rl5jlm3ob6"]
+[gd_scene load_steps=7 format=3 uid="uid://60rl5jlm3ob6"]
 
 [ext_resource type="Script" path="res://scripts/IngredientMode.gd" id="1_nopfp"]
 [ext_resource type="Texture2D" uid="uid://ds1wxdvgpq720" path="res://assets/ingredients selecters.png" id="2_s2gaq"]
-[ext_resource type="PackedScene" uid="uid://5f4bomx4pli4" path="res://scripts/ingredients_selecter.tscn" id="3_fgpdy"]
+[ext_resource type="PackedScene" uid="uid://devjucbie3jw4" path="res://scenes/scroller_menu.tscn" id="4_1c24t"]
+[ext_resource type="PackedScene" uid="uid://5f4bomx4pli4" path="res://scenes/ingredients_selecter.tscn" id="4_x6ery"]
+[ext_resource type="PackedScene" uid="uid://bvhhe2rda3g3e" path="res://scenes/button_shade.tscn" id="5_wl1f6"]
+[ext_resource type="PackedScene" uid="uid://c2ctjqr4lbr1o" path="res://scenes/SlotsIngredients.tscn" id="6_jqps5"]
 
 [node name="IngredientMode" type="Control"]
 layout_mode = 3
@@ -15,12 +18,20 @@ offset_bottom = 296.5
 grow_vertical = 2
 script = ExtResource("1_nopfp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="scroll" parent="." instance=ExtResource("4_1c24t")]
+layout_mode = 1
+active = false
+visibleBackground = false
+positions = Array[Vector2]([Vector2(0, 0), Vector2(-156, 0)])
+relative = true
+speed = 500.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="scroll"]
 position = Vector2(-0.599976, -1.52002)
 texture = ExtResource("2_s2gaq")
 centered = false
 
-[node name="Ingredient1" parent="." instance=ExtResource("3_fgpdy")]
+[node name="Ingredient1" parent="scroll" instance=ExtResource("4_x6ery")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.765
@@ -30,9 +41,8 @@ anchor_bottom = 0.135
 offset_top = -63.0
 offset_right = 63.5
 offset_bottom = 65.0
-ingredient = 1
 
-[node name="Ingredient2" parent="." instance=ExtResource("3_fgpdy")]
+[node name="Ingredient2" parent="scroll" instance=ExtResource("4_x6ery")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.765
@@ -42,8 +52,9 @@ anchor_bottom = 0.378
 offset_top = -63.0
 offset_right = 63.0
 offset_bottom = 63.0
+ingredient = 2
 
-[node name="Ingredient3" parent="." instance=ExtResource("3_fgpdy")]
+[node name="Ingredient3" parent="scroll" instance=ExtResource("4_x6ery")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.765
@@ -55,7 +66,7 @@ offset_right = 63.0
 offset_bottom = 63.0
 ingredient = 3
 
-[node name="Ingredient4" parent="." instance=ExtResource("3_fgpdy")]
+[node name="Ingredient4" parent="scroll" instance=ExtResource("4_x6ery")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.765
@@ -66,3 +77,47 @@ offset_top = -63.0
 offset_right = 63.0
 offset_bottom = 63.0
 ingredient = 4
+
+[node name="ButtonShade2" parent="scroll" instance=ExtResource("5_wl1f6")]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = -38.5
+offset_right = 23.0
+offset_bottom = 35.5
+grow_horizontal = 1
+
+[node name="slot1" parent="scroll" instance=ExtResource("6_jqps5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.301
+anchor_top = 0.25
+anchor_right = 0.301
+anchor_bottom = 0.25
+slot = 0
+
+[node name="slot2" parent="scroll" instance=ExtResource("6_jqps5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.301
+anchor_right = 0.301
+
+[node name="slot3" parent="scroll" instance=ExtResource("6_jqps5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.301
+anchor_top = 0.75
+anchor_right = 0.301
+anchor_bottom = 0.75
+slot = 2
+
+[connection signal="selected" from="scroll/Ingredient1" to="." method="SelectedIngredient"]
+[connection signal="selected" from="scroll/Ingredient2" to="." method="SelectedIngredient"]
+[connection signal="selected" from="scroll/Ingredient3" to="." method="SelectedIngredient"]
+[connection signal="selected" from="scroll/Ingredient4" to="." method="SelectedIngredient"]
+[connection signal="pressed" from="scroll/ButtonShade2" to="." method="moveAndMove"]
+[connection signal="Used" from="scroll/slot1" to="." method="SelectSlot"]
+[connection signal="Used" from="scroll/slot2" to="." method="SelectSlot"]
+[connection signal="Used" from="scroll/slot3" to="." method="SelectSlot"]

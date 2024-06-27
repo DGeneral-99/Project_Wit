@@ -1,5 +1,6 @@
 extends Control
 
+class_name IngredientsSelecter
 @onready var  manager: ListIngredients = preload("res://scripts/recursos/ingredientes/Manager.tres")
 @export_range(0,4) var ingredient :int = 1
 @onready var buttoner: Button = $ButtonShade
@@ -9,7 +10,9 @@ extends Control
 signal selected(ingredientOut:int)
 
 func _ready()-> void:
-	##buttoner.flat = true
+	update()
+	
+func  update()->void:
 	if(manager.isUnlock(ingredient)):
 		##buttoner.texture_normal = manager.getIngredient(ingredient).texture
 		##buttoner.icon = manager.getIngredient(ingredient).texture
@@ -17,7 +20,6 @@ func _ready()-> void:
 		pass
 	else:
 		buttoner.disabled = true
-		##buttoner.visible = false
 	
 func Selected() -> void:
 	emit_signal("selected", ingredient)

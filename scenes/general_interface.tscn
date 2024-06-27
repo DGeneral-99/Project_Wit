@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyx3jeppshv33"]
+[gd_scene load_steps=6 format=3 uid="uid://cyx3jeppshv33"]
 
 [ext_resource type="Script" path="res://scripts/general_interface.gd" id="1_54bmv"]
 [ext_resource type="Texture2D" uid="uid://cfjle0m1g73mf" path="res://assets/mockupGeneralScene.jpeg" id="1_vyosv"]
 [ext_resource type="PackedScene" uid="uid://60rl5jlm3ob6" path="res://scenes/ingredient_mode.tscn" id="3_uv2d0"]
+[ext_resource type="PackedScene" uid="uid://d3sf1o6fhjsv4" path="res://scenes/potion_control.tscn" id="4_oqpjf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_siurk"]
 font_size = 64
@@ -63,8 +64,12 @@ layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -335.0
-offset_right = 0.0
+offset_left = -23.0
+offset_right = 312.0
 grow_horizontal = 0
 
+[node name="PotionControl" parent="." instance=ExtResource("4_oqpjf")]
+layout_mode = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="witchCraft" from="IngredientMode" to="." method="setPotion"]

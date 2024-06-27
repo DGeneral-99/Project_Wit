@@ -1,38 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://devjucbie3jw4"]
+[gd_scene load_steps=4 format=3 uid="uid://devjucbie3jw4"]
 
 [ext_resource type="PackedScene" uid="uid://bvhhe2rda3g3e" path="res://scenes/button_shade.tscn" id="1_58eup"]
 [ext_resource type="Script" path="res://scripts/scroller_menu.gd" id="1_66o33"]
+[ext_resource type="Texture2D" uid="uid://6n0l4v826bff" path="res://assets/Menuuuu.png" id="2_6r7pk"]
 
 [node name="ScrollerMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -51.5
-offset_right = 52.0
-offset_bottom = 51.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_66o33")
-posicionFinal = Vector2(0, 100)
-relative = true
-speed = 60.6
+positions = Array[Vector2]([Vector2(0, 0), Vector2(100, 0)])
+speed = 100.0
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("2_6r7pk")
+centered = false
 
 [node name="ButtonShade" parent="." instance=ExtResource("1_58eup")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 128.0
-offset_bottom = 128.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [connection signal="pressed" from="ButtonShade" to="." method="travel"]
