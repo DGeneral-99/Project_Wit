@@ -1,10 +1,9 @@
 extends Resource
 
-class_name ListIngredients
+class_name ListPotion
 
-@export var Ingredients : Array[magicIngredient] = []
-@export var usingIngredients : Array[int] = [0,0,0]
-
+@export var Potions : Array[MagicPotion] = []
+"""
 func unlocked()->Array[int]:
 	var knowed_ingredients :Array[int] = []
 	for ingredient: magicIngredient in Ingredients:
@@ -21,8 +20,6 @@ func update(slot: int, newIngredient : int) -> Texture2D:
 	
 func numberPotion() -> int:
 	var ingredients : Array[float] = [0,0,0,0]
-	if(usingIngredients[0]==0 or usingIngredients[1]==0 or usingIngredients[2]==0):
-		return 0
 	ingredients[usingIngredients[0]-1] += 1
 	ingredients[usingIngredients[1]-1] += 1
 	ingredients[usingIngredients[2]-1] += 1
@@ -40,4 +37,4 @@ func isUnlock(ingredient:int)->bool:
 	return Ingredients[ingredient].unlock
 func getIngredient(ingredient:int)->magicIngredient:
 	return Ingredients[ingredient]
-	
+	"""

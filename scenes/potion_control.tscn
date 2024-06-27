@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3sf1o6fhjsv4"]
+
+[ext_resource type="Script" path="res://scripts/PotionControl.gd" id="1_pl6px"]
+[ext_resource type="Texture2D" uid="uid://dr5jxdnbfol0c" path="res://assets/potions/Potion_0.png" id="2_prbc7"]
+
+[node name="PotionControl" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -256.0
+offset_right = 512.0
+offset_bottom = 256.0
+grow_vertical = 2
+script = ExtResource("1_pl6px")
+
+[node name="Potion" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_prbc7")
+centered = false

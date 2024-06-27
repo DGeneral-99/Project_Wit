@@ -1,22 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyx3jeppshv33"]
+[gd_scene load_steps=11 format=3 uid="uid://cyx3jeppshv33"]
 
 [ext_resource type="Script" path="res://scripts/general_interface.gd" id="1_54bmv"]
 [ext_resource type="Texture2D" uid="uid://cfjle0m1g73mf" path="res://assets/mockupGeneralScene.jpeg" id="1_vyosv"]
+[ext_resource type="PackedScene" uid="uid://60rl5jlm3ob6" path="res://scenes/ingredient_mode.tscn" id="3_uv2d0"]
+[ext_resource type="PackedScene" uid="uid://d3sf1o6fhjsv4" path="res://scenes/potion_control.tscn" id="4_oqpjf"]
+[ext_resource type="PackedScene" uid="uid://devjucbie3jw4" path="res://scenes/scroller_menu.tscn" id="5_c2aip"]
+[ext_resource type="Texture2D" uid="uid://ggx6kk3ar3je" path="res://assets/boton_0000_Capa-2.png" id="5_iklaq"]
+[ext_resource type="Texture2D" uid="uid://dpo64msqc0hwp" path="res://assets/boton_0003_Capa-5.png" id="6_2qqrd"]
+[ext_resource type="Texture2D" uid="uid://dgreru1h2e7s5" path="res://assets/boton_0001_Capa-3.png" id="7_2qqfl"]
+[ext_resource type="Texture2D" uid="uid://cutnhk4750peq" path="res://assets/boton_0002_Capa-4.png" id="8_47d5w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_siurk"]
 font_size = 64
 
 [node name="General Interface" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -455.0
-offset_right = 226.0
-offset_bottom = 447.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -24,9 +25,8 @@ script = ExtResource("1_54bmv")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(262, 494.5)
-scale = Vector2(0.67875, 0.802971)
 texture = ExtResource("1_vyosv")
+centered = false
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -57,4 +57,151 @@ offset_bottom = 335.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="IngredientMode" parent="." instance=ExtResource("3_uv2d0")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+offset_right = 305.001
+grow_horizontal = 0
+
+[node name="Configuration" parent="." instance=ExtResource("5_c2aip")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.083
+anchor_top = 0.947
+anchor_right = 0.083
+anchor_bottom = 0.947
+offset_left = -677.76
+offset_top = -33.16
+offset_right = 42.24
+offset_bottom = 1246.84
+grow_horizontal = 1
+grow_vertical = 0
+active = false
+positions = Array[Vector2]([Vector2(0, 0), Vector2(610, -760)])
+relative = true
+speed = 1000.0
+
+[node name="Button" type="Button" parent="Configuration"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -106.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 105.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("5_iklaq")
+flat = true
+
+[node name="AcercaDe" parent="." instance=ExtResource("5_c2aip")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -615.0
+offset_top = -1178.0
+offset_right = 105.0
+offset_bottom = 102.0
+grow_horizontal = 1
+grow_vertical = 0
+active = false
+positions = Array[Vector2]([Vector2(0, 0), Vector2(610, 760)])
+relative = true
+speed = 1000.0
+
+[node name="Button" type="Button" parent="AcercaDe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.853
+anchor_top = 0.923
+anchor_right = 0.853
+anchor_bottom = 0.923
+offset_left = -3.16003
+offset_top = -7.44019
+offset_right = 114.84
+offset_bottom = 110.56
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("6_2qqrd")
+flat = true
+
+[node name="Tienda" parent="." instance=ExtResource("5_c2aip")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.939
+anchor_top = 0.962
+anchor_right = 0.939
+anchor_bottom = 0.962
+offset_left = -52.0801
+offset_top = -54.3601
+offset_right = 667.92
+offset_bottom = 1225.64
+active = false
+positions = Array[Vector2]([Vector2(0, 0), Vector2(-602, -755)])
+relative = true
+speed = 1000.0
+
+[node name="Button" type="Button" parent="Tienda"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_right = -0.001
+offset_left = -17.28
+offset_top = -11.0
+offset_right = 100.72
+offset_bottom = 107.0
+focus_mode = 0
+icon = ExtResource("7_2qqfl")
+flat = true
+
+[node name="Recetario" parent="." instance=ExtResource("5_c2aip")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.927
+anchor_top = 0.04
+anchor_right = 0.927
+anchor_bottom = 0.04
+offset_left = -44.4401
+offset_top = -1228.2
+offset_right = 675.56
+offset_bottom = 51.8
+active = false
+positions = Array[Vector2]([Vector2(0, 0), Vector2(-602, 755)])
+relative = true
+speed = 1000.0
+
+[node name="Button" type="Button" parent="Recetario"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -106.0
+offset_right = 101.0
+offset_bottom = 12.0
+focus_mode = 0
+icon = ExtResource("8_47d5w")
+flat = true
+
+[node name="PotionControl" parent="Recetario" instance=ExtResource("4_oqpjf")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = -1067.0
+offset_right = 643.0
+offset_bottom = -555.0
+grow_vertical = 0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="witchCraft" from="IngredientMode" to="." method="setPotion"]
+[connection signal="pressed" from="Configuration/Button" to="Configuration" method="travel"]
+[connection signal="pressed" from="AcercaDe/Button" to="AcercaDe" method="travel"]
+[connection signal="pressed" from="Tienda/Button" to="Tienda" method="travel"]
+[connection signal="pressed" from="Recetario/Button" to="Recetario" method="travel"]
