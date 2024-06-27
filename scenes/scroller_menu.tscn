@@ -16,6 +16,7 @@ positions = Array[Vector2]([Vector2(0, 0), Vector2(100, 0)])
 speed = 100.0
 
 [node name="background" type="Sprite2D" parent="."]
+scale = Vector2(0.795, 0.89)
 texture = ExtResource("2_6r7pk")
 centered = false
 
