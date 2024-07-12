@@ -1,0 +1,44 @@
+[gd_scene load_steps=10 format=3 uid="uid://c73s4kwbr3obc"]
+
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0006_Capa-1.png" id="1_fu3j3"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0005_Capa-2.png" id="2_53xij"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0004_Capa-3.png" id="3_kiil1"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0003_Capa-4.png" id="4_byxvp"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0002_Capa-5.png" id="5_g7tc0"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0001_Capa-6.png" id="6_ay4hw"]
+[ext_resource type="Texture2D" path="res://assets/looping/paleta_0000_Capa-7.png" id="7_s8ccs"]
+[ext_resource type="Script" path="res://scripts/batir.gd" id="8_b06gc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1qoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fu3j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_53xij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kiil1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_byxvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g7tc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ay4hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s8ccs")
+}],
+"loop": false,
+"name": &"action",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_s1qoj")
+animation = &"action"
+script = ExtResource("8_b06gc")

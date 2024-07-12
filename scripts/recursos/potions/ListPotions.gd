@@ -3,6 +3,13 @@ extends Resource
 class_name ListPotion
 
 @export var Potions : Array[MagicPotion] = []
+
+func getPotion(potion : int)-> Texture:
+	if(Potions[potion].unlock):
+		return Potions[potion].texture
+	else:
+		return Potions[0].texture
+	
 """
 func unlocked()->Array[int]:
 	var knowed_ingredients :Array[int] = []

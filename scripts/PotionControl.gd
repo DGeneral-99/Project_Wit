@@ -7,4 +7,4 @@ class_name PotionControl
 @onready var potion: Sprite2D = $Potion
 
 func update(potion:int)->void:
-	self.potion.texture = manager.Potions[potion].texture
+	self.potion.texture = manager.getPotion(potion);
